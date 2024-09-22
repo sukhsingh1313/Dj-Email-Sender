@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Easy_Sender</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="container">
+        <h2>Send an Email</h2>
+        <form method="POST">
+            {% csrf_token %}
+             {% bootstrap_form form %}
+            
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</body>
+</html>
